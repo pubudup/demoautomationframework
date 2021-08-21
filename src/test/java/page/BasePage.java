@@ -5,11 +5,9 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.Set;
-import java.util.function.Function;
 
 public class BasePage {
 
@@ -31,14 +29,8 @@ public class BasePage {
     }
 
     public void waitForPageLoad() {
-        Wait<WebDriver> wait = new WebDriverWait(driver, 30);
-        wait.until(new Function<WebDriver, Boolean>() {
-            public Boolean apply(WebDriver driver) {
-                return String
-                        .valueOf(((JavascriptExecutor) driver).executeScript("return document.readyState"))
-                        .equals("complete");
-            }
-        });
+        WebDriverWait wait = new WebDriverWait(driver, 15);
+        wait.until(webDriver -> ((JavascriptExecutor) driver).executeScript("return document.readyState").toString().equals("complete"));
     }
 
     public void clickTermsAndConditionsLink() {
