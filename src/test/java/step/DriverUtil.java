@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class DriverUtil {
 
     final static String BASE_URL = "https://money.gocompare.com/";
-    final static String DRIVER_PATH = "/Users/compucorp/Downloads/cdr/chromedriver";
+    final static String DRIVER_PATH = "[DRIVERPATH]";
     final static String DRIVER_NAME = "webdriver.chrome.driver";
     WebDriver driver;
 
