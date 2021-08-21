@@ -15,7 +15,6 @@ public class YourResultsStep {
     @Then("I should see personalised results")
     public void i_should_see_personalised_results() {
         YourResultsPage yourResultsPage = new YourResultsPage(driver);
-        Assert.assertEquals(YourResultsPage.getURL(), driver.getCurrentUrl());
         Assert.assertTrue(yourResultsPage.isProductVisible());
     }
 

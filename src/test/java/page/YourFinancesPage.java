@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 
+import java.util.concurrent.TimeUnit;
+
 public class YourFinancesPage extends BasePage {
 
     private static final String URL = "vehiclefinance#/your-finances";
@@ -48,6 +50,7 @@ public class YourFinancesPage extends BasePage {
     public void clickPrivacyStatementButton() {
         this.waitForElementToLoad(privacyStatementButton);
         driver.findElement(privacyStatementButton).click();
+        this.waitForPageLoad();
     }
 
     public void fillEmploymentTitle(String title) {

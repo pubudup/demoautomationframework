@@ -74,5 +74,6 @@ public class CarDetailsPage extends BasePage {
     public void clickContinueButton() {
         this.waitForElementToLoad(continueButton);
         driver.findElement(continueButton).click();
+        this.waitForPageLoad();
     }
 }

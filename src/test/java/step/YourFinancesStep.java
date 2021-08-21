@@ -29,6 +29,5 @@ public class YourFinancesStep {
     public void iAcceptPrivacyStatement() throws InterruptedException {
         YourFinancesPage yourFinancesPage = new YourFinancesPage(driver);
         yourFinancesPage.clickPrivacyStatementButton();
-        Thread.sleep(5000);
     }
 }
