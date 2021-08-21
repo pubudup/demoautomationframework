@@ -18,7 +18,7 @@ public class CarFinanceSteps {
     }
 
     @Given("I am on car finance page")
-    public void i_am_on_car_finance_page() throws InterruptedException {
+    public void i_am_on_car_finance_page() {
         CarDetailsPage carDetailsPage = new CarDetailsPage(driver);
         carDetailsPage.openCarDetailsPage();
     }
@@ -75,6 +75,5 @@ public class CarFinanceSteps {
     public void iNavigateToAboutYouPage() {
         CarDetailsPage carDetailsPage = new CarDetailsPage(driver);
         carDetailsPage.clickContinueButton();
-        //Assert.assertEquals(AboutYouPage.getURL(), driver.getCurrentUrl());
     }
 }

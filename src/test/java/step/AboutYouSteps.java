@@ -29,10 +29,9 @@ public class AboutYouSteps {
     }
 
     @And("I navigate to Your Finances page")
-    public void iNavigateToYourFinancesPage() throws InterruptedException {
+    public void iNavigateToYourFinancesPage() {
         AboutYouPage aboutYouPage = new AboutYouPage(driver);
         aboutYouPage.clickContinueButton();
-        //Assert.assertEquals(YourFinancesPage.getURL(), driver.getCurrentUrl());
 
     }
 }
