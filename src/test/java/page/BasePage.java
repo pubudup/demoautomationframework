@@ -31,12 +31,9 @@ public class BasePage {
     }
 
     public void waitForPageLoad() {
-
         Wait<WebDriver> wait = new WebDriverWait(driver, 30);
         wait.until(new Function<WebDriver, Boolean>() {
             public Boolean apply(WebDriver driver) {
-                System.out.println("Current Window State       : "
-                        + String.valueOf(((JavascriptExecutor) driver).executeScript("return document.readyState")));
                 return String
                         .valueOf(((JavascriptExecutor) driver).executeScript("return document.readyState"))
                         .equals("complete");
