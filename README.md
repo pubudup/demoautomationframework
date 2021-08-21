@@ -1,4 +1,4 @@
-**User Journey Test Cases :: Java/Selenium/Cucumber**
+**Automated Test Cases :: Java/Selenium/Cucumber**
 
 Setting Up
 1. Download the relevant chrome driver to your local machine from 
