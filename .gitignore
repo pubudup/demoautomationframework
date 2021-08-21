@@ -1,5 +1,5 @@
 .DS_Store
-QAProject.iml
+*.iml
 .idea/
 target/
 output/
