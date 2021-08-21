@@ -14,16 +14,16 @@ public class YourResultsPage extends BasePage {
     }
 
     public static String getURL() {
-        return BASE_URL+URL;
+        return BASE_URL + URL;
     }
 
-    public String getSearchResultNotification(){
+    public String getSearchResultNotification() {
         this.waitForElementToLoad(searchResultsNotification);
         String label = driver.findElement(searchResultsNotification).getText();
-        return  label;
+        return label;
     }
 
-    public boolean isProductVisible(){
+    public boolean isProductVisible() {
         this.waitForElementToLoad(carFinanceProduct);
         boolean displayed = driver.findElement(carFinanceProduct).isDisplayed();
         return displayed;

@@ -27,26 +27,26 @@ public class AboutYouPage extends BasePage {
     }
 
     public static String getURL() {
-        return BASE_URL+URL;
+        return BASE_URL + URL;
     }
 
-    public void selectTitle(String value){
+    public void selectTitle(String value) {
         this.waitForElementToLoad(titleDropDown);
         Select title = new Select(driver.findElement(titleDropDown));
         title.selectByVisibleText(value);
     }
 
-    public void fillFirstName(String firstName){
+    public void fillFirstName(String firstName) {
         this.waitForElementToLoad(firstNameTextBox);
         driver.findElement(firstNameTextBox).sendKeys(firstName);
     }
 
-    public void fillLastName(String lastName){
+    public void fillLastName(String lastName) {
         this.waitForElementToLoad(lastNameTextBox);
         driver.findElement(lastNameTextBox).sendKeys(lastName);
     }
 
-    public void fillDateOfBirth(String day, String month, String year){
+    public void fillDateOfBirth(String day, String month, String year) {
         this.waitForElementToLoad(dobYearTextBox);
         driver.findElement(dobDayTextBox).sendKeys(day);
         driver.findElement(dobMonthTextBox).sendKeys(month);
@@ -54,41 +54,40 @@ public class AboutYouPage extends BasePage {
     }
 
 
-    public void fillEmail(String email){
+    public void fillEmail(String email) {
         this.waitForElementToLoad(emailTextBox);
         driver.findElement(emailTextBox).sendKeys(email);
     }
 
-    public void fillPhoneNumber(String phoneNumber){
+    public void fillPhoneNumber(String phoneNumber) {
         this.waitForElementToLoad(phoneNumberTextBox);
         driver.findElement(phoneNumberTextBox).sendKeys(phoneNumber);
     }
 
-    public void fillPostcode(String postcode){
+    public void fillPostcode(String postcode) {
         this.waitForElementToLoad(postcodeTextBox);
         driver.findElement(postcodeTextBox).sendKeys(postcode);
     }
 
-    public void clickSearchPostcodeButton(){
+    public void clickSearchPostcodeButton() {
         this.waitForElementToLoad(searchPostcodeButton);
         driver.findElement(searchPostcodeButton).click();
     }
 
-    public void selectAddressResult(){
+    public void selectAddressResult() {
         this.waitForElementToLoad(addressListItem);
         driver.findElement(addressListItem).click();
     }
 
-    public void clickLivedYearsButton(){
+    public void clickLivedYearsButton() {
         this.waitForElementToLoad(livedYearsButton);
         driver.findElement(livedYearsButton).click();
     }
 
-    public void clickContinueButton(){
+    public void clickContinueButton() {
         this.waitForElementToLoad(continueButton);
         driver.findElement(continueButton).click();
     }
-
 
 
 }

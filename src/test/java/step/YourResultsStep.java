@@ -7,6 +7,7 @@ import page.YourResultsPage;
 
 public class YourResultsStep {
     WebDriver driver;
+
     public YourResultsStep(DriverUtil driverUtil) {
         this.driver = driverUtil.initiateDriver();
     }

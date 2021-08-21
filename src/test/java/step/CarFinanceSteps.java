@@ -6,13 +6,13 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
-import page.AboutYouPage;
 import page.BasePage;
 import page.CarDetailsPage;
 
 public class CarFinanceSteps {
 
     WebDriver driver;
+
     public CarFinanceSteps(DriverUtil driverUtil) {
         this.driver = driverUtil.initiateDriver();
     }
@@ -51,7 +51,7 @@ public class CarFinanceSteps {
     }
 
     @And("I click Find Car button")
-    public void iClickFindCarButton(){
+    public void iClickFindCarButton() {
         CarDetailsPage carDetailsPage = new CarDetailsPage(driver);
         carDetailsPage.clickFindButton();
     }
@@ -59,11 +59,11 @@ public class CarFinanceSteps {
     @Then("error message {string} should be displayed")
     public void errorMessageShouldBeDisplayed(String errorMessage) {
         CarDetailsPage carDetailsPage = new CarDetailsPage(driver);
-        Assert.assertEquals(errorMessage,carDetailsPage.getInvalidRegistrationErrorMessage());
+        Assert.assertEquals(errorMessage, carDetailsPage.getInvalidRegistrationErrorMessage());
     }
 
     @When("I fill mandatory details on Car Finance page")
-    public void iFillMandatoryDetailsOnCarFinancePage(){
+    public void iFillMandatoryDetailsOnCarFinancePage() {
         CarDetailsPage carDetailsPage = new CarDetailsPage(driver);
         carDetailsPage.clickRegistrationIDNoButton();
         carDetailsPage.fillCarValue("12000");

@@ -22,56 +22,56 @@ public class CarDetailsPage extends BasePage {
     }
 
     public static String getURL() {
-        return BASE_URL+URL;
+        return BASE_URL + URL;
     }
 
-    public void openCarDetailsPage(){
-        driver.get(BASE_URL+URL);
+    public void openCarDetailsPage() {
+        driver.get(BASE_URL + URL);
     }
 
-    public String getPageTitle(){
-       return driver.getTitle();
+    public String getPageTitle() {
+        return driver.getTitle();
     }
 
-    public void fillRegistrationNumber(String registrationNumber){
+    public void fillRegistrationNumber(String registrationNumber) {
         this.waitForElementToLoad(registrationNumberTextBox);
         driver.findElement(registrationNumberTextBox).sendKeys(registrationNumber);
     }
 
-    public void clickFindButton(){
+    public void clickFindButton() {
         this.waitForElementToLoad(findButton);
         driver.findElement(findButton).click();
     }
 
-    public String getInvalidRegistrationErrorMessage(){
+    public String getInvalidRegistrationErrorMessage() {
         this.waitForElementToLoad(registrationNumberError);
         String errorText = driver.findElement(registrationNumberError).getText();
         return errorText;
     }
 
-    public void clickRegistrationIDNoButton(){
+    public void clickRegistrationIDNoButton() {
         this.waitForElementToLoad(registrationIDNoButton);
         driver.findElement(registrationIDNoButton).click();
     }
 
-    public void fillCarValue(String value){
+    public void fillCarValue(String value) {
         this.waitForElementToLoad(carValueTextBox);
         driver.findElement(carValueTextBox).sendKeys(value);
     }
 
-    public void fillDepositAmount(String deposit){
+    public void fillDepositAmount(String deposit) {
         this.waitForElementToLoad(depositAmountTextBox);
         driver.findElement(depositAmountTextBox).sendKeys(deposit);
     }
 
-    public void selectPaymentYears(int selectOption){
+    public void selectPaymentYears(int selectOption) {
         this.waitForElementToLoad(yearsDropdown);
         Select years = new Select(driver.findElement(yearsDropdown));
         years.selectByIndex(selectOption);
 
     }
 
-    public void clickContinueButton(){
+    public void clickContinueButton() {
         this.waitForElementToLoad(continueButton);
         driver.findElement(continueButton).click();
     }

@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/feature/",
         glue = {"src/test/step/"},
-        plugin = {"pretty","json:target/cucumberResults.json","html:target/sites/cucumber-pretty"},
+        plugin = {"pretty", "json:target/cucumberResults.json", "html:target/sites/cucumber-pretty"},
         monochrome = true
 )
 
